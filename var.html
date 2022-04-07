@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var</title>
+    <style>
+        a, a:link{
+            /* 區域變數 */
+            --primary-color: #3b5998;
+            color: var(--primary-color);
+        }
+        .box{
+            --primary-color: #ccc;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background: #3b5998;
+            border: 3px solid var(--primary-color);
+        }
+        .inside{
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <a href="">facebook</a>
+    <div class="box">
+        <div class="inside"></div>
+    </div>
+</body>
+</html>

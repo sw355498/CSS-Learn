@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex排版</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        :root{
+            --primary-color:#3b5998;
+            --secondary-color: #8b9dc3;
+            --bg-color: #f7f7f7;
+        }
+        body{
+            background: var(--bg-color);
+        }
+        a, a:link{
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .line-unstyle{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .cover-fit{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .facebook{
+            min-height: calc(100vh - 52.4px);
+        }
+        .facebook-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: var(--bg-color);
+        }
+        .logo{
+            height: 40px;
+            overflow: hidden;
+        }
+        .user{
+            align-self: center;
+        }
+        .facebook-nav{
+            background: var(--primary-color);
+        }
+        .facebook-nav ul:not(.submenu){
+            display: flex;    
+        }
+        .facebook-nav ul li{
+            position: relative;
+        }
+        .facebook-nav ul li:hover .submenu{
+            opacity: 1;
+            max-height: 500px;
+        }
+        .facebook-nav a{
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+        }
+        .facebook-nav a:hover, .facebook-nav li.active a{
+            text-decoration: none;
+            background: var(--secondary-color);
+        }
+        @media screen AND (max-width:768px){
+            .facebook-nav>ul>li{
+                /* flex-grow: 1;
+                flex-basis: 0px; */
+                flex: 1 0 0px;        
+            }
+            .facebook-nav>ul>li>a{
+                padding:10px 0px;
+                text-align: center;
+            }
+        }
+        .submenu{
+            position: absolute;
+            background: var(--primary-color);
+            /* flex-direction: column; */
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: .4s;
+        }
+        .facebook-content{
+            display: flex;
+            margin-top: 10px;
+        }
+        .photo{
+            width: 160px;
+            height: 160px;
+            margin: 0px 0px 10px; 
+            border: 1px solid lightskyblue;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .left-aside a{
+            display: block;
+            padding: 10px 15px;
+            border-left: 4px solid transparent;
+        }
+        .left-aside a:hover, .left-aside li.active a{
+            text-decoration: none;
+            background: #fff;
+            border-left: 4px solid var(--primary-color);
+        }
+        .main-content{
+            padding: 20px;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+        }
+        .main-content h1{
+            margin-top: 0px;
+        }
+        .main-content time{
+            font-size: 0.8rem;
+            color: #666;
+        }
+        .right-aside{
+            display: flex;
+        }
+        .right-aside img{
+            width: 160px;
+            align-self: flex-end;
+        }
+        @media screen AND (max-width:768px){
+            .facebook-content{
+                flex-direction: column;
+            }
+            .photo{
+                margin: 0 auto;
+            }
+            .left-aside ul{
+                display: flex;
+                margin: 5px 0px;
+            }
+            .left-aside>ul>li{
+                flex: 1 0 0px;
+            }
+            .left-aside a{
+                text-align: center;
+                border-left: none;
+                border-top: 4px solid transparent;
+            }
+            .left-aside li.active a{
+                border-left: none;
+                border-top: 4px solid var(--primary-color);
+            }
+            .facebook-content p{
+                text-align: justify;
+            }
+            .right-aside img{
+                display: none;
+            }
+        }
+        .facebook-footer{
+            background: #ccc;
+            text-align: center;
+            margin-top: 10px;
+            padding: 1px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="facebook">
+        <header class="facebook-header">
+            <a href="#">
+                <img class="logo" src="https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688__480.png" alt="facebook">
+            </a>
+            <div class="user">
+                <a href="#">Log in</a> | <a href="#">Sign Up</a>
+            </div>
+        </header>
+        <nav class="facebook-nav">
+            <ul class="line-unstyle wrapper">
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="">Product</a>
+                    <ul class="line-unstyle submenu">
+                        <li><a href="">Men</a></li>
+                        <li><a href="">Women</a></li>
+                        <li><a href="">Childer</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Story</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+        <div class="facebook-content wrapper">
+            <aside class="left-aside">
+                <figure class="photo">
+                    <img class="cover-fit" src="https://cdn.pixabay.com/photo/2021/04/27/04/19/girl-6210483__480.jpg" alt="photo">
+                </figure>
+                <ul class="line-unstyle">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Album</a></li>
+                    <li><a href="">Video</a></li>
+                </ul>
+            </aside>
+            <main class="facebook-main">
+                <div class="main-content">
+                    <h1>CSS</h1>
+                    <div><time>2022/02</time></div>
+                    <p>
+                        階層式樣式表（英語：Cascading Style Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。CSS 被分為不同等級：CSS1 現已廢棄， CSS2.1 是推薦標準， CSS3 分成多個小模組且正在標準化中。[來源請求]CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中。
+                    </p>
+                    <p>
+                        CSS不能單獨使用，必須與HTML或XML一起協同工作，為HTML或XML起裝飾作用。本文主要介紹用於裝飾HTML網頁的CSS技術。其中HTML負責確定網頁中有哪些內容，CSS確定以何種外觀(大小、粗細、顏色、對齊和位置)展現這些元素。CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。CSS可以零散地直接添加在要應用樣式的網頁元素上，也可以集中化內建於網頁、連結式引入網頁以及匯入式引入網頁。
+                    </p>
+                    <p>
+                        CSS最重要的目標是將檔案的內容與它的顯示分隔開來。在CSS出現前，幾乎所有的HTML檔案內都包含檔案顯示的資訊，比如字型的顏色、背景應該是怎樣的、如何排列、邊緣、連線等等都必須一一在HTML檔案內列出，有時重複列出。CSS使作者可以將這些資訊中的大部分隔離出來，簡化HTML檔案，這些資訊被放在一個輔助的，用CSS語言寫的檔案中。HTML檔案中只包含結構和內容的資訊，CSS檔案中只包含樣式的資訊。
+                    </p>
+                </div>
+            </main>
+            <aside class="right-aside">
+                <img src="https://cdn.pixabay.com/photo/2018/11/24/07/19/moe-3835094__480.png" alt="cartoon-girl">
+            </aside>
+        </div>
+    </div>
+    <footer class="facebook-footer"><p>&copy;Copyright by facebook</p></footer>
+</body>
+</html>

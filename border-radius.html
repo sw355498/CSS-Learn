@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        .d-flex{
+            display: flex;
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+            background: pink;
+            margin: 5px;
+        }
+        .radius1{
+            border-radius: 20px;
+        }
+        .radius2{
+            border-radius: 10px 20px 30px 50px;
+        }
+        .radius3{
+            border-radius: 10px 20px 30px;
+        }
+        .radius4{
+            border-radius: 0px 40px;
+        }
+        .radius5{
+            border-radius: 20%;
+        }
+        .radius6{
+            border-radius: 0 0 100% 0;
+        }
+        .radius7{
+            border-radius: 50%;
+        }
+        .radius8{
+            border-radius: 20px/50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="box radius1"></div>
+        <div class="box radius2"></div>
+        <div class="box radius3"></div>
+        <div class="box radius4"></div>
+        <div class="box radius5"></div>
+        <div class="box radius6"></div>
+        <div class="box radius7"></div>
+        <div class="box radius8"></div>
+    </div>
+</body>
+</html>

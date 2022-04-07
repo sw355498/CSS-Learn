@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>濾鏡效果</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img{
+            width: 200px;
+            transition: .5s;
+        }
+        figure{
+            text-align: center;
+        }
+        .bg{
+            background: lightcyan;
+        }
+        /*模糊*/
+        .blur{
+            filter:blur(10px)
+        }
+        /*亮度*/
+        .brightness{
+            filter: brightness(50%);
+        }
+        .brightness:hover{
+            filter: brightness(150%);
+        }
+        /*對比*/
+        .contrast{
+            filter: contrast(60%);
+        }
+        .contrast:hover{
+            filter: contrast(140%);
+        }
+        /*灰階   最大100%*/
+        .grayscale{
+            filter: grayscale(100%);
+        }
+        /*色相變換*/
+        .hue-rotate{
+            filter: hue-rotate(120deg);
+        }
+        /* 負片 */
+        .invert{
+            filter: invert(100%);
+        }
+        /* 飽和度 */
+        .saturate{
+            filter: saturate(200%);
+        }
+        .saturate:hover{
+            filter: saturate(0%);
+        }
+        /* 懷舊 */
+        .sepia{
+            filter: sepia(100%);
+        }
+        /* 陰影 */
+        .drop-shadow{
+            filter: drop-shadow(0 0 10px #333);
+        }
+        .box-shadow{
+            box-shadow: 0 0 10px #333;
+        }
+        .shadow{
+            box-shadow: 0 0 10px #333;
+        }
+        .shadow:hover{
+            filter: drop-shadow(0 0 10px #333); 
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <figure>
+            <img class="" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>原圖</figcaption>
+        </figure>
+        <figure>
+            <img class="blur" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>模糊(blur)</figcaption>
+        </figure>
+        <figure>
+            <img class="brightness" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>亮度(brightness)</figcaption>
+        </figure>
+        <figure>
+            <img class="contrast" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>對比(contrast)</figcaption>
+        </figure>
+        <figure>
+            <img class="grayscale" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>灰階(grayscale)</figcaption>
+        </figure>
+        <figure>
+            <img class="hue-rotate" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>色相變換(hue-rotate)</figcaption>
+        </figure>
+        <figure>
+            <img class="invert" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>負片(invert)</figcaption>
+        </figure>
+        <figure>
+            <img class="saturate" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>飽和度(saturate)</figcaption>
+        </figure>
+        <figure>
+            <img class="sepia" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>懷舊(sepia)</figcaption>
+        </figure>
+        <figure>
+            <img class="drop-shadow" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>陰影(drop-shadow)</figcaption>
+        </figure>
+        <figure>
+            <img class="box-shadow" src="https://cdn.pixabay.com/photo/2016/11/21/14/47/kitten-1845789__480.jpg" alt="cat">
+            <figcaption>陰影(box-shadow)</figcaption>
+        </figure>
+    </div>
+    <h1>drop-shadow與box-shadow陰影對比</h1>
+    <div class="wrapper bg">
+        <figure>
+            <img class="" src="https://cdn.pixabay.com/photo/2017/02/25/23/50/animal-2099057_1280.png" alt="doll">
+            <figcaption>去背原圖</figcaption>
+        </figure>
+        <figure>
+            <img class="drop-shadow" src="https://cdn.pixabay.com/photo/2017/02/25/23/50/animal-2099057_1280.png" alt="doll">
+            <figcaption>陰影(drop-shadow)</figcaption>
+        </figure>
+        <figure>
+            <img class="box-shadow" src="https://cdn.pixabay.com/photo/2017/02/25/23/50/animal-2099057_1280.png" alt="doll">
+            <figcaption>陰影(box-shadow)</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

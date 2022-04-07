@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imamge sprite</title>
+    <style>
+        @keyframes walk{
+            0%{
+                background-position: 0px 245px;
+            }
+            100%{
+                background-position: -390px 245px;
+            }
+        }
+        .zombiewalk{
+            width: 65px;
+            height: 65px;
+            margin: 10px auto 0;
+            background: url("https://as2.ftcdn.net/v2/jpg/02/31/27/15/1000_F_231271585_B0XgWdIF70WPMqAQa2XskCfR8vQctT7v.jpg") 0px 245px;          
+            animation: walk .8s infinite steps(6);
+        }
+        .zombiewalk:hover{
+            animation: walk .4s infinite steps(6);
+        }
+    </style>
+</head>
+<body>
+    <div class="zombiewalk"></div>
+</body>
+</html>

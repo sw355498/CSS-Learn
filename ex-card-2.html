@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card2</title>
+    <style>
+        body{
+            background: #666;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card{
+            width: 300px;
+            background: #fff;
+            border-radius: 20px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 0 5px #333;
+            overflow: hidden;
+            /* 使用方法二需要將card設為參考容器 */
+            position: relative;
+        }
+        .bg{
+            height: 120px;
+            background: url("https://live.staticflickr.com/8870/28558438475_e9b6501aa8_b.jpg");
+            background-size: cover;
+        }
+        .photo{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            /* 方法一：利用margin可以負值的特性 */
+            /* margin: -50px auto; */
+            /* 方法二：使用position */
+            margin: 0px;
+            position: absolute;
+            top:calc(50% - 85px);
+            left:calc(50% - 50px);
+        }
+        .photo img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card h3{
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(134, 134, 134, .5);
+        }
+        .text-block{
+            padding: 30px 10px 10px ;
+            border: 15px solid transparent;
+            border-image: url("https://cdn.pixabay.com/photo/2020/02/06/01/52/frame-4822807__480.png") 83 round;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="bg"></div>
+        <figure class="photo">
+            <img src="https://loremflickr.com/300/200" alt="Photo">
+        </figure>
+        <div class="text-block">
+            <h3>job title</h3>
+            <p>introduce</p>
+        </div>
+    </div>
+</body>
+</html>

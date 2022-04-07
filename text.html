@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+    <style>
+        body{
+            background: #aaa;
+        }
+        .card{
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 240px;
+            float: left;
+            background: #fff;
+        }
+        .card h2 a{
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+        }
+        .card p{
+            overflow : hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:3;
+        }
+        .btn{
+            display: inline-block;
+            background: lightskyblue;
+            padding: 5px 10px;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background: blue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <h2>
+                <a href="#" title="認識 HTML5 表單驗證">認識 HTML5 表單驗證</a>
+            </h2>
+            <p>
+                在網頁製作中，常常遇到表單填寫需求。為了確保收集到對的資料，必須進行資料驗證，當使用者輸入錯誤資料時，使用適當的方式提醒使用者。
+            </p>
+            <a role="button" class="btn">詳細資訊</a>
+        </div>
+        <div class="card">
+            <h2>
+                <a href="#" title="一次搞懂同步與非同步的一切：待會叫你 —回呼函式(Callback Function)">一次搞懂同步與非同步的一切：待會叫你 —回呼函式(Callback Function)</a>
+            </h2>
+            <p>
+                什麼是 Callback function?Callback function
+                其實就是一般的函式，差異只在 Callback function 是在指定時機才觸發的
+                function，你可以在指定的時候，做完某件事情的時候才呼較的函式，所以一句話來說，如本文標題，就像是：「待會叫你」。
+            </p>
+            <a role="button" class="btn">詳細資訊</a>
+        </div>
+    </div>
+</body>
+</html>

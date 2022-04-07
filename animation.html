@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /*定義動畫*/
+        @keyframes animate1{
+            from{
+                background: red;
+            }
+            to{
+                background: pink;
+                border-radius: 50%;
+            }
+        }
+        /* 使用百分比定義動畫 */
+        @keyframes animate2{
+            0%{
+                background: red;
+            }
+            15%{
+                background: orange;
+            }
+            30%{
+                background: yellow;
+            }
+            45%{
+                background: green;
+            }
+            60%{
+                background: blue;
+            }
+            75%{
+                background: #4b0080;
+            }
+            100%{
+                background: purple;
+            }
+        }
+
+        .wrapper{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .wrapper figure{
+            margin: 10px;
+            text-align: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background: red;
+            animation: animate1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background: pink;
+            animation: animate2;
+            animation-duration: 8s;
+            animation-iteration-count:5;
+        }
+        .delay{
+            animation-delay: 1s;
+        }
+        .direction-normal{
+            animation-direction: normal;
+        }
+        .direction-reverse{
+            animation-direction: reverse;
+        }
+        .direction-alternate{
+            animation-direction:alternate;
+        }
+        .direction-alternate-reverse{
+            animation-direction:alternate-reverse;
+        }
+        .fill-mode-backwards{
+            animation-fill-mode:backwards
+        }
+        .fill-mode-forwards{
+            animation-fill-mode: forwards;
+        }
+        .fill-mode-both{
+            animation-fill-mode: both
+        }
+        .play-state:hover{
+            animation-play-state: paused;
+        }
+        .timing-function-linear{
+            animation-timing-function: linear;
+        }
+        .timing-function-cubic{
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .timing-function-steps{
+            animation-timing-function: steps(4);
+        }
+        .timing-function-start{
+            animation-timing-function: steps(1, start);
+        }
+        .timing-function-end{
+            animation-timing-function: steps(1, end);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <figure>
+            <div class="box"></div>
+            <figcaption>持續播放</figcaption>
+        </figure>
+        <figure>
+            <div class="box1"></div>
+            <figcaption>無添加參數</figcaption>
+        </figure>
+        <figure>
+            <div class="box1 delay"></div>
+            <figcaption>延遲播放</figcaption>
+        </figure>
+        <figure>
+            <div class="box play-state"></div>
+            <figcaption>hover時暫停播放</figcaption>
+        </figure>
+    </div>
+    <div class="wrapper">
+        <h3>animation-direction:動畫完播放方向</h3>
+        <figure>
+            <div class="box1 direction-normal"></div>
+            <figcaption>direction-normal</figcaption>
+        </figure>
+        <figure>
+            <div class="box1 direction-reverse"></div>
+            <figcaption>direction-reverse</figcaption>
+        </figure>
+        <figure>
+            <div class="box1 direction-alternate"></div>
+            <figcaption>direction-alternate</figcaption>
+        </figure>
+        <figure>
+            <div class="box1 direction-alternate-reverse"></div>
+            <figcaption>direction-alternate-reverse</figcaption>
+        </figure>
+    </div>
+    <div class="wrapper">
+        <h3>animation-fill-mode:設定動畫停止時顯示的畫面</h3>
+        <figure>
+            <div class="box1 fill-mode-backwards"></div>
+            <figcaption>fill-mode-backwards</figcaption>
+        </figure>
+        <figure>
+            <div class="box1 fill-mode-forwards"></div>
+            <figcaption>fill-mode-forwards</figcaption>
+        </figure>
+        <figure>
+            <div class="box1 fill-mode-both"></div>
+            <figcaption>fill-mode-both</figcaption>
+        </figure>
+    </div>
+    <div class="wrapper">
+        <h3>animation-timing-function</h3>
+        <figure>
+            <div class="box timing-function-linear"></div>
+            <figcaption>timing-function-linear</figcaption>
+        </figure>
+        <figure>
+            <div class="box timing-function-cubic"></div>
+            <figcaption>timing-function-cubic</figcaption>
+        </figure>
+        <figure>
+            <div class="box timing-function-steps"></div>
+            <figcaption>timing-function-steps</figcaption>
+        </figure>
+        <figure>
+            <div class="box timing-function-start"></div>
+            <figcaption>timing-function-start</figcaption>
+        </figure>
+        <figure>
+            <div class="box timing-function-end"></div>
+            <figcaption>timing-function-end</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

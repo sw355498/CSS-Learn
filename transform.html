@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .d-flex{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+        }
+        .box-wrap{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+        .box-wrap .box{
+            margin: 0px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: cornflowerblue;
+            margin: 20px;
+            transition: .4s;
+        }
+        .translateX:hover{
+            transform: translateX(20px);
+        }
+        .translateY:hover{
+            transform: translateY(-20px);
+        }
+        .translate:hover{
+            transform: translate(20px, -20px);
+        }
+        .rotate:hover{
+            transform: rotate(360deg);
+        }
+        .scaleX:hover{
+            transform: scaleX(1.5);
+        }
+        .scaleY:hover{
+            transform: scaleY(.8);
+        }
+        .scale:hover{
+            transform: scale(1.5, 0.8);
+        }
+        .box-wrap .scale2{
+            transform: scale(0);
+        }
+        .box-wrap:hover .scale2{
+            transform: scale(1);
+        }
+        .slide{
+            transform: translateY(-100px);
+        }
+        .box-wrap:hover .slide{
+            transform: translateY(0);
+        }
+        .move{
+            transform: translateX(-200px);
+            display: none;
+            opacity: 0;
+        }
+        .box-wrap:hover .move{
+            transform: translateX(0);
+            display: block;
+            opacity: 1;
+        }
+        .box-wrap:hover .skew{
+            transform: skew(15deg, 20deg);
+        }
+        .box-wrap:hover .transform{
+            transform: translateX(-100px) rotate(45deg);
+        }
+        .box-wrap:hover .matrix{
+            transform: matrix(1.6, 0.5, -1, 0.8, 100, -100);
+        }
+        .transform-origin{
+            transform-origin: left top;
+        }
+        .box-wrap:hover .transform-origin{
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="box translateX">translateX</div>
+        <div class="box translateY">translateY</div>
+        <div class="box translate">translate</div>
+        <div class="box rotate">rotate</div>
+        <div class="box scaleX">scaleX</div>
+        <div class="box scaleY">scaleY</div>
+        <div class="box scale">scale</div>
+
+        <!-- 將感應區域與變形區域分開 -->
+        <div class="box-wrap">
+            <div class="box scale2">scale2</div>
+        </div>
+        <div class="box-wrap overflow-hidden">
+            <div class="box slide">slide</div>
+        </div>
+        <div class="box-wrap">
+            <div class="box move">move</div>
+        </div>
+        <div class="box-wrap">
+            <div class="box skew">skew</div>
+        </div>
+        <div class="box-wrap">
+            <div class="box transform">transform</div>
+        </div>
+        <div class="box-wrap">
+            <div class="box matrix">matrix</div>
+        </div>
+        <div class="box-wrap">
+            <div class="box transform-origin">transform-origin</div>
+        </div>
+    </div>
+</body>
+</html>

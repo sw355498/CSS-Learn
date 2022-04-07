@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .full-page{
+            background: lightblue;
+            height: 100vh;
+            /* width: 50vw; */
+        }   
+        div{
+            font-size: 2rem;
+        }
+        .box{
+            background: pink;
+            width: 20vmax;
+            height: 20vmin;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-page">
+        Firdt level content.
+        <div>
+            Second level content.
+            <div>Third level content</div>
+        </div>
+        <div class="box"></div>
+    </div>
+    <div class="full-page">
+        page2
+    </div>
+</body>
+</html>

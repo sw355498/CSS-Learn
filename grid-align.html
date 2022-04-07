@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid{
+            max-width: 960px;
+            height: 450px;
+            background: lightskyblue;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            justify-content: stretch;
+            /* align-content: space-around; */
+        }
+        .box{
+            background: pink;
+            padding: 10px;
+            border: 1px solid #aaa;
+        }
+        .justify-self-start{
+            justify-self: start ;
+        }
+        .justify-self-end{
+            justify-self: end;
+        }
+        .justify-self-center{
+            justify-self: center;
+        }
+        .justify-self-stretch{
+            justify-self: stretch;
+        }
+        .align-self-start{
+            align-self: start;
+        }
+        .align-self-end{
+            align-self: end;
+        }
+        .align-self-center{
+            align-self: center;
+        }
+        .align-self-stretch{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box justify-self-start">justify-self-start</div>
+        <div class="box justify-self-end">justify-self-end</div>
+        <div class="box justify-self-center">justify-self-center</div>
+        <div class="box justify-self-stretch">justify-self-stretch</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box align-self-start">align-self-start</div>
+        <div class="box align-self-end">align-self-end</div>
+        <div class="box align-self-center">align-self-center</div>
+        <div class="box align-self-stretch">align-self-stretch</div>
+    </div>
+</body>
+</html>

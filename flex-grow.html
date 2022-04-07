@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow</title>
+    <style>
+        .wrapper {
+            max-width: 800px;
+            height: 600px;
+            background: #aaa;
+            margin: 0 auto;
+            display: flex;
+            /* display: inline-flex; */
+            flex-direction: row;
+            justify-content: center;
+        }
+        .box {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background: pink;
+            /* flex-grow: 1; */
+        }
+        .flex-grow1 {
+            flex-grow: 1;
+        }
+        .flex-grow2 {
+            flex-grow: 2;
+        }
+        .flex-grow3 {
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box flex-grow1">flex-grow: 1</div>
+        <div class="box flex-grow2">flex-grow: 2</div>
+        <div class="box flex-grow3">flex-grow: 0</div>
+        <div class="box">未設定flex-grow</div>
+    </div>
+</body>
+</html>

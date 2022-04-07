@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漢堡選單</title>
+    <script src="https://kit.fontawesome.com/54c9742faa.js" crossorigin="anonymous"></script>
+    <style>
+        .list-unstyle{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .hamburgerMenu-line{
+           display: none;
+           transition: .4s;
+        }
+        .hamburgerMenu-line a{
+            display: block;
+            width: 100px;
+            color: #fff;
+            background: rgb(150, 212, 233);
+            border-bottom: 1px solid #ffd518; 
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .hamburgerMenu-label{
+            display: block;
+        }
+        .hamburgerMenu-input{
+            display: none;
+        }
+        #burger:checked + .hamburgerMenu-line{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <label class="hamburgerMenu-label" for="burger"><i class="fa-solid fa-bars"></i></label>
+        <input class="hamburgerMenu-input" type="checkbox" name="" id="burger" checked>
+        <ul class="hamburgerMenu-line list-unstyle">
+            <li><a href="">首頁</a></li>
+            <li><a href="">關於我們</a></li>
+            <li><a href="">商品介紹</a></li>
+            <li><a href="">新聞連結</a></li>
+            <li><a href="">聯絡我們</a></li>
+        </ul>
+    </header>
+</body>
+</html>

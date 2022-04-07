@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border image</title>
+    <style>
+        .d-flex{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            /* background: pink; */
+            border: 20px solid transparent;
+            margin: 20px;
+        }
+        .round{
+            border-image: url("https://cdn.pixabay.com/photo/2020/02/06/01/52/frame-4822807__480.png") 83 round;
+        }
+        .repeat{
+            border-image: url("https://cdn.pixabay.com/photo/2020/02/06/01/52/frame-4822807__480.png") 83 repeat;
+        }
+        .stretch{
+            border-image: url("https://cdn.pixabay.com/photo/2020/02/06/01/52/frame-4822807__480.png") 83 stretch;
+        }
+        .outset{
+            border-image-outset: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="box round"></div>
+        <div class="box repeat"></div>
+        <div class="box stretch"></div>
+        <div class="box round outset"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip path</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            overflow: hidden;
+            transition: .4s;
+        }
+        .box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .circle{
+            clip-path: circle(10% at 50% 50%);
+        }
+        .circle:hover{
+            clip-path: circle(50% at 50% 50%);
+        }
+        .ellipse{
+            clip-path: ellipse(30% 50% at 50% 50%);
+        }
+        .inset{
+            clip-path: inset(5px 10px 15px 20px round 10% 20% 30% 40%);
+        }
+        .triangle{
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+        .diamond{
+            clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <figure>
+            <div class="box">
+                <img src="https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg" alt="cat">
+            </div>
+            <figcaption>原圖</figcaption>
+        </figure>
+        <figure>
+            <div class="box circle">
+                <img src="https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg" alt="cat">
+            </div>
+            <figcaption>圓形(circle)</figcaption>
+        </figure>
+        <figure>
+            <div class="box ellipse">
+                <img src="https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg" alt="cat">
+            </div>
+            <figcaption>橢圓形(ellipse)</figcaption>
+        </figure>
+        <figure>
+            <div class="box inset">
+                <img src="https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg" alt="cat">
+            </div>
+            <figcaption>內置矩形(inset)</figcaption>
+        </figure>
+        <figure>
+            <div class="box triangle">
+                <img src="https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg" alt="cat">
+            </div>
+            <figcaption>多邊形-三角形(polygon)</figcaption>
+        </figure>
+        <figure>
+            <div class="box diamond">
+                <img src="https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg" alt="cat">
+            </div>
+            <figcaption>多邊形-菱形(polygon)</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

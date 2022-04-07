@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity</title>
+    <style>
+        .box{
+            width: 500px;
+            position: relative;
+            background: black;
+        }
+        .box:hover .bg{
+            opacity: .5;
+        }
+        .box:hover .text{
+            opacity: 1;
+        }
+        .text{
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5), rgba(0, 0, 0, .8));
+            margin: 0px;
+            padding: 20px 0px 10px;
+            position: absolute;
+            bottom: 0px;
+            left: calc(50% - 250px);
+            opacity: .3;
+            z-index: 2;
+            transition: .4s;
+        }
+        .bg{
+            width: 500px;
+            height: 300px;
+            background: url('https://live.staticflickr.com/8870/28558438475_e9b6501aa8_b.jpg') center center no-repeat;
+            background-size: cover;
+            transition: .4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3 class="text">花蓮秘境-慕谷慕魚</h3>
+        <div class="bg"></div>
+    </div>
+</body>
+</html>

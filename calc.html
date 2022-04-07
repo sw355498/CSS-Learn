@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .main{
+            width: 100%;
+            min-height: calc(100vh - 42.5px);
+        }
+        .wrapper{
+            max-width: 800px;
+            background: lightblue;
+            margin: 0 auto;
+        }
+        .box{
+            width: calc(25% - 10px);
+            background: pink;
+            float: left;
+            padding: 10px;
+            margin: 0px 5px 10px;
+            border: 1px solid gray;
+        }
+        /* .clear{
+            clear: both;
+        } */
+        .footer{
+            padding: 10px;
+            background: #aaa;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="wrapper clearfix">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <!-- <div class="clear"></div> -->
+        </div>
+    </main>
+    <footer class="footer">this is footer</footer>
+</body>
+</html>

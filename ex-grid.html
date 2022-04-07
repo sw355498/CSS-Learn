@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid排版</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .list-unstyle{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "header header header header"
+            "nav nav nav nav"
+            "main main main aside"
+            "footer footer footer footer"
+            ;
+        }
+        .wrapper img{
+            width: 100%;
+            height: 100%;
+        }
+        header{
+            grid-area: header;
+            max-width: 960px;
+            height: 200px;
+            overflow: hidden;
+        }
+        header img{
+            object-fit: cover;
+        }
+        nav{
+            grid-area: nav;    
+            /* background: lightskyblue;        */
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li{
+            flex-grow: 1;
+            flex-shrink: 0px;
+            text-align: center;
+        }
+        nav ul li a{
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;       
+        }
+        nav ul li a:hover{
+            color: #fff;
+            background: lightskyblue; 
+        }
+        main{
+            grid-area: main;
+        }
+        aside{
+            /* background: green; */
+            grid-area: aside;
+            margin-left: 10px;
+        }
+        aside h3{
+            margin: 0 0 10px 0;
+        }
+        aside figcaption{
+                text-align: center;
+        }
+        footer{
+            grid-area: footer;
+            /* background: #ccc; */
+            padding: 10px 0px;
+            text-align: center;
+
+        }
+        @media screen AND (max-width: 768px){
+            .wrapper{
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                "nav"
+                "main"
+                "aside"
+                "footer"
+                ;
+            }
+            main, aside{
+                padding: 0 15px;
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+            }
+            main iframe{
+                order: 1;
+            }
+            aside{
+                margin: 20px 0px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="https://image6.thenewslens.com/2014/06/4144315202_0ed6df86d9_b.jpg?auto=compress&fit=crop&h=648&q=85&updated_at=2014-06-09-08-56-15&w=1080" alt="慕谷慕魚">
+        </header>
+        <nav>
+            <ul class="list-unstyle">
+                <li><a href="">Home</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Content</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58329.02977434817!2d121.43838480703127!3d23.975840326376275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468a297dd22428b%3A0xaa7684668e2248c8!2z5oWV6LC35oWV6a2a55Sf5oWL5buK6YGT!5e0!3m2!1szh-TW!2stw!4v1645872449308!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h1>慕谷慕魚</h1>
+            <article>
+                <p>
+                    慕谷慕魚(Mukumugi)是緣自太魯閣族的譯音。描述當初最早遷徙到這裏的太魯閣族人(花蓮縣秀林鄉銅門地區與榕樹部落)，用他們的語言頌贊這片世外桃源。這裏有豐富的自然資源，有柔情似水的秀麗風景，長久以來就有『小天祥』的美稱。
+                </p>
+            </article>
+        </main>
+        <aside>
+            <h3>附近景點</h3>
+            <figure>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77967.91388734689!2d121.56451670394387!3d24.07615577191603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346627fa2982158f%3A0x54beb3b2202a7046!2z5pu85rOi5rW354GY!5e0!3m2!1szh-TW!2stw!4v1638873071802!5m2!1szh-TW!2stw"
+                  width="100%"
+                  height="100"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+                <figcaption>曼波海灘</figcaption>
+              </figure>
+              <figure>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58316.98931465928!2d121.57117691527833!3d24.002428877096644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34689de8602037a5%3A0x9b5ce482dc0e7554!2z5LiD5pif5r2t5rW35bK46aKo5pmv54m55a6a5Y2A!5e0!3m2!1szh-TW!2stw!4v1638873321642!5m2!1szh-TW!2stw"
+                  width="100%"
+                  height="100"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+                <figcaption>七星潭海岸風景特定區</figcaption>
+              </figure>
+              <figure>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d116745.26770345932!2d121.5490326!3d23.8793468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468a0ed6d6407f9%3A0x2f6eb4ab11dcd20a!2z6YGg6ZuE5rW35rSL5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1638873243460!5m2!1szh-TW!2stw"
+                  width="100%"
+                  height="100"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+                <figcaption>遠雄海洋公園</figcaption>
+              </figure>
+        </aside>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background image</title>
+    <style>
+        .box{
+            max-width: 800px;
+            height: 300px;
+            margin: 0 auto 20px;
+            border: 2px solid black;
+            background: url("http://4.bp.blogspot.com/-YoIZZRFShaA/VAelSfcSpII/AAAAAAADwxM/hfS2h9euh8I/s1600/google%2Bmaps%2Btaiwan-01.png") center center no-repeat;
+        }
+        .cover{
+            background-size: cover;
+        }
+        .contain{
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box cover"></div>
+    <div class="box contain"></div>
+</body>
+</html>

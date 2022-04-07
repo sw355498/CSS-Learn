@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items</title>
+    <style>
+        figure {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .wrapper {
+            max-width: 800px;
+            height: 600px;
+            background: #aaa;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .box {
+            margin: 0 10px;
+            background: pink;
+            width: 100px;
+        }
+        .box-size1 {
+            min-height: 200px;
+        }
+        .box-size2 {
+            min-height: 160px;
+        }
+        .box-size3 {
+            min-height: 90px;
+        }
+        .box-size4 {
+            min-height: 245px;
+        }
+        .font-size1{
+            font-size: 20px;
+        }
+        .font-size2{
+            font-size: 50px;
+        }
+        .font-size3{
+            font-size: 5px;
+        }
+        .font-size4{
+            font-size: 80px;
+        }
+        .flex-start {
+            align-items: flex-start;
+        }
+        .flex-end {
+            align-items: flex-end;
+        }
+        .center {
+            align-items: center;
+        }
+        .stretch {
+            align-items:stretch;
+        }
+        .baseline {
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <div class="wrapper flex-start">
+            <div class="box box-size1">1</div>
+            <div class="box box-size2">2</div>
+            <div class="box box-size3">3</div>
+            <div class="box box-size4">4</div>
+        </div>
+        <figcaption class="text-center">flex-start</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper flex-end">
+            <div class="box box-size1">1</div>
+            <div class="box box-size2">2</div>
+            <div class="box box-size3">3</div>
+            <div class="box box-size4">4</div>
+        </div>
+        <figcaption class="text-center">flex-end</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper center">
+            <div class="box box-size1">1</div>
+            <div class="box box-size2">2</div>
+            <div class="box box-size3">3</div>
+            <div class="box box-size4">4</div>
+        </div>
+        <figcaption class="text-center">center</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper stretch">
+            <div class="box box-size1">1</div>
+            <div class="box box-size2">2</div>
+            <div class="box box-size3">3</div>
+            <div class="box box-size4">4</div>
+        </div>
+        <figcaption class="text-center">stretch(預設)</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper baseline">
+            <div class="box box-size1 font-size1">1</div>
+            <div class="box box-size2 font-size2">2</div>
+            <div class="box box-size3 font-size3">3</div>
+            <div class="box box-size4 font-size4">4</div>
+        </div>
+        <figcaption class="text-center">baseline</figcaption>
+    </figure>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align content</title>
+    <style>
+        figure {
+            margin-bottom: 50px;
+        }
+        .wrapper {
+            max-width: 800px;
+            height: 600px;
+            background: #aaa;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            margin: 10px;
+            width: 150px;
+            min-height: 100px;
+            background: pink;
+            flex-shrink: 0;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .stretch{
+            align-content: stretch;
+        }
+        .center{
+            align-content: center;
+        }
+        .flex-start{
+            align-content: flex-start;
+        }
+        .flex-end{
+            align-content: flex-end;
+        }
+        .space-between{
+            align-content: space-between;
+        }
+        .space-around{
+            align-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <div class="wrapper stretch">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <figcaption class="text-center">stretch</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper center">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <figcaption class="text-center">center</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper flex-start">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <figcaption class="text-center">flex-start</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper flex-end">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <figcaption class="text-center">flex-end</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper space-between">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <figcaption class="text-center">space-between</figcaption>
+    </figure>
+    <figure>
+        <div class="wrapper space-around">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <figcaption class="text-center">space-around</figcaption>
+    </figure>
+</body>
+</html>
