@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>純CSS霓虹發光按鈕</title>
+    <style>
+        @keyframes neon{
+            from{
+                background-position: 0%;
+            }
+            to{
+                background-position: 300%;
+            }
+        }
+        @keyframes glow{
+            from{
+                filter: blur(1px);
+            }
+            to{
+                filter: blur(10px);
+            }
+        }
+        html{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+        }
+        button{
+            position: relative;
+            border: none;
+            outline: none;
+            width: 200px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 60px;
+            border-radius: 25px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #fff;
+            background: linear-gradient(90deg, cornflowerblue, deeppink, gold, cornflowerblue);
+            background-size: 300%;
+            animation: neon 10s linear infinite;
+        }
+        button::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: inherit;/* 繼承父層 */
+            border-radius: 25px;
+            filter: blur(10px);
+            animation: glow 1s linear infinite;
+            animation-direction: alternate;
+            z-index: -1;
+        }
+        button:hover, button:hover::after{
+            animation-play-state: paused;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body>
+    <button>button</button>
+</body>
+</html>
